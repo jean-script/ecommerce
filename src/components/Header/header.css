@@ -1,0 +1,43 @@
+
+
+
+.menu-header {
+    width: 90%;
+    height: 50px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 300px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:8px;
+}
+
+.logo-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: #213E26;
+    
+}
+
+.lista-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.lista-menu li {
+    cursor: pointer;
+}
+
+.lista-menu li:hover {
+    text-decoration: underline;
+}

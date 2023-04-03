@@ -1,100 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@900&family=Montserrat:wght@200;400&display=swap');
 
 
-.container-assinatura {
-    background-image: url('../../img/arvore.png');
-    background-repeat: no-repeat;
-    background-size: 480px 560px;
-    background-position: 700px;
-    object-fit: contain;
-    width: 80%;
-    max-width: 1210px;
-}
-
-.assinatura {
-    width: 90%;
-    max-width: 585px;
-    height: 462px;
-    padding: 20px;
-    margin-left: 200px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    font-family: 'Montserrat';
-}
-
-.assinatura span{
-    font-size: 22px;
-    font-weight: 400;
-    color: #202020;
+.btn-desativado {
+    background: #ffcb478f;
+    cursor:not-allowed;
     opacity: 0.5;
+    transition: all 0.5;
 }
 
-.assinatura h2 {
-    font-weight: 900;
-    font-size: 82px;
-    margin-bottom: 10px;
-}
-
-.assinatura p {
-    font-size: 16px;
-    font-weight: 400;
-    opacity: 0.5;
-    max-width: 481px;
-    line-height: 26px;
-}
-
-.container-btn-assinatura {
-    width: 585px;
-    height: 85px;
-    /* box-shadow: 10px 20px 20px #20202028; */
-}
-
-.container-btnemail-assinatura {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding:10px 0;
-
-}
-
-.container-btnemail-assinatura input {
-    width:391px ;
-    height: 65px;
-    padding: 10px;
-    border: none;
-    padding-left: 60px;
-}
-
-.container-btnemail-assinatura input::placeholder {
-    
-    color: #202020;
-    opacity: 0.3;
-    
-}
-
-.container-btn-assinatura svg {
-    position: relative;
-    left: 23px;
-    top: 52px;
-}
-
-.container-btnemail-assinatura button {
-    background: #FFCB47;
-    border: none;
-    width: 194px;
-    height: 65px;
-    padding: 10px;
-    color: #ffffff;
-    font-size: 16px;
-    text-align: center;
-    font-weight: 400;
-    cursor: pointer;
-}
-
-.vector-icon {
-    position:absolute;
-    right: 0;
-
+.btn-desativado:hover {
+    background: #ffcb47be;
+    cursor:not-allowed;
 }
 
 

@@ -1,22 +1,30 @@
 import styled from "styled-components";
 import Arvore from '../../img/arvore.png'
+import Fundo from '../../img/Vector.png'
+
 
 export const ContainerAssinatura = styled.div`
-    background-image: url(${Arvore});
+    /* background-image: url(${Arvore});
     background-repeat: no-repeat;
     background-size: 480px 560px;
-    background-position: 700px;
+    background-position: 600px; */
     object-fit: contain;
-    width: 80%;
+    width: 100%;
     max-width: 1210px;
+    display:block;
+    margin:auto;
 `;
 
 export const Assinatura = styled.div`
+    /* background-image: url(${Fundo});
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 800px 530px;    */
     width: 90%;
     max-width: 585px;
     height: 462px;
     padding: 20px;
-    margin-left: 200px;
+    margin-left: 15px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -33,6 +41,7 @@ export const Assinatura = styled.div`
         font-weight: 900;
         font-size: 82px;
         margin-bottom: 10px;
+        font-family:'Elsie Swash Caps';
     }
 
     p {
@@ -42,6 +51,17 @@ export const Assinatura = styled.div`
         max-width: 481px;
         line-height: 26px;
     }
+
+    @media (max-width:650px){
+        align-items:center;
+        margin:auto;
+
+        h2 {
+            text-align:center;
+        }
+    }
+
+
 `;
 
 export const ContainerBtn = styled.div`
@@ -53,6 +73,13 @@ export const ContainerBtn = styled.div`
         left: 23px;
         top: 52px;
     }
+    
+    @media (max-width:650px){
+        svg{
+            left:93px;
+        }
+
+    }
 `;
 
 export const Formulario = styled.form`
@@ -61,6 +88,7 @@ export const Formulario = styled.form`
     flex-direction: row;
     align-items: center;
     padding:10px 0;
+    
 
     input {
         width:391px ;
@@ -86,6 +114,19 @@ export const Formulario = styled.form`
         text-align: center;
         font-weight: 400;
         cursor: pointer;
+        
+    }
+
+    @media (max-width:650px){
+        margin-left:70px;
+        input{
+            width:280px;
+            
+        }
+
+        button{
+            width:170px
+        }
     }
 
 `;

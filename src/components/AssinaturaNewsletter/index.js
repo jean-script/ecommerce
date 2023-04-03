@@ -1,7 +1,67 @@
+import { useState, useRef, useEffect  } from 'react'
 import { ContainerAssinatura, Assinatura, ContainerBtn, Formulario } from "./styled"
+import emailjs from '@emailjs/browser';
+import validator from 'validator'
+
+import Api from '../../Services/api'
+
+import './assinatura.css'
 
 
 export default function AssinaturaNewsletter(){
+
+    const [email, setEmail] = useState('');
+    const [btnAtvo, setBtnAtivo] = useState(true);
+    const [produtos, setProdutos]= useState([]);
+    const form = useRef();
+
+    // useEffect(()=>{
+    //     function loadApi(){
+
+    //         const URL = "https://gist.githubusercontent.com/bugan/41d60ffa23fa0c4044cc138bf670780d/raw";
+
+    //         fetch(URL)
+    //         .then((response)=> response.json())
+    //         .then((json)=>{
+    //             setProdutos(json);
+    //             console.log(json);
+    //         })
+    //     }
+
+    //     loadApi();
+    // },[])
+
+
+    function handleValidaEmail(e){
+        setEmail(e.target.value)
+        
+        if(validator.isEmail(email)){
+            setBtnAtivo(false)
+            
+        }else {
+            setBtnAtivo(true)
+        }
+
+        if(email ===""){
+            setBtnAtivo(false)
+        }
+    }
+
+    function handleMessage(e){
+        e.preventDefault();
+        alert(`Obrigado pela sua assinatura, você receberá nossas novidades no e-mail ${email}`)
+        setEmail('');
+        setBtnAtivo(true)
+        emailjs.sendForm('gmailMessage', 'template_1lc73ig', form.current, '8ax_9g4JgsR2g2wcw')
+        .then((result) => {
+            console.log(result.text);
+            console.log("Enviado com sucesso!");
+        }, (error) => {
+            console.log(error.text);
+        });
+        e.target.reset();
+    }
+
     return(
         <ContainerAssinatura>
             <Assinatura>
@@ -21,14 +81,26 @@ export default function AssinaturaNewsletter(){
                         <path d="M23 2.24475L12.2157 6.60091L1.4314 2.24475" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </g>
                     </svg>
-                <Formulario>
-                    <input type="email" placeholder='Insira seu e-mail' required />
-                    <button type='submit' >Assinar newsletter</button>
+                <Formulario ref={form} onSubmit={handleMessage}>
+                    <input type="email" placeholder='Insira seu e-mail' value={email} name="name" onChange={(e)=> handleValidaEmail(e)} required />
+                    
+                    {!btnAtvo ? (
+                        <button type='submit'>Assinar newsletter</button>
+                        
+                    ): (
+                            
+                        <button type='submit' className='btn-desativado' disabled>Assinar desetivado</button>
+                    )}
+
+
+
                 </Formulario>
             </ContainerBtn>
 
+
             </Assinatura>
 
+            
         </ContainerAssinatura>
     )
 }

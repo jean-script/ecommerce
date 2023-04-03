@@ -1,0 +1,66 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@900&family=Montserrat:wght@200;400&display=swap');
+
+
+.minha-planta {
+    width: 995px;
+    height: 400px;
+    display: block;
+    margin: auto;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    margin-bottom: 10px;
+}
+
+.container-planta {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-planta img {
+    width: 606px;
+    height: 400px;
+    max-width: 600px;
+}
+
+.container-planta span {
+    font-size: 22px;
+    font-weight: 400;
+    color: #202020;
+    opacity: 0.5;
+}
+
+.container-planta h3 {
+    font-size: 42px;
+    font-weight: 900;
+    color: #202020;
+    font-family: 'Elsie Swash Caps';
+}
+
+.minha-planta-info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.lista-info-plantas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+}
+
+.lista-info-plantas li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.lista-info-plantas li span {
+    font-size: 22px;
+    color: #202020;
+    opacity: 0.5;
+}

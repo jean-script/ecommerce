@@ -9,9 +9,24 @@
 body {
     background: #f4f4f493;
     font-family: 'Montserrat', sans-serif;
-    background-image: url('./img/Vector.png');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 800px 530px;
+}
 
+.App {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.img-fundo {
+    position: absolute;
+    right: 0;
+    z-index: -2;
+    height: 580px;
+}
+
+.img-arvore {
+    position:absolute;
+    right: 320px;
+    height: 670px;
+    z-index: -2;
 }

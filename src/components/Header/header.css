@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@900&family=Montserrat:wght@200;400&display=swap');
 
 
 .menu-header {
@@ -6,9 +7,9 @@
     height: 50px;
     padding-top: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 300px;
 }
 
@@ -40,4 +41,8 @@
 
 .lista-menu li:hover {
     text-decoration: underline;
+}
+
+.lista {
+    font-family:'Montserrat';
 }

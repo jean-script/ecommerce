@@ -1,7 +1,9 @@
 import { MenuHeader, Logo, ListaMenu } from './styled';
 
-
 export default function Menu(){
+
+    
+
     return(
         <header>
             <MenuHeader>
@@ -12,7 +14,7 @@ export default function Menu(){
                     <h2>Casa<strong>Verde</strong></h2>
                 </Logo>
                 <div>
-                    <ListaMenu>
+                    <ListaMenu className='lista'>
                         <li>Como fazer</li>
                         <li> / </li>
                         <li>Ofertas</li>

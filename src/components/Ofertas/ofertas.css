@@ -65,15 +65,22 @@
     opacity: 0.5;
 }
 
+@media (max-width:1000px) {
+    .container-planta img{
+        width:400px ;
+    }
+}
+
 @media (max-width:750px){
 
     .minha-planta {
         width: 100%;
         display: block;
         margin: auto;
+        padding: 10px;
     }
     .container-planta img {
-        width: 200px;
+        width: 250px;
         object-fit: cover;
     }
 }

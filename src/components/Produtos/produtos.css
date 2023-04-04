@@ -60,6 +60,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    flex: 1;
 }
 
 .produto-info span{
@@ -96,7 +97,7 @@
     text-decoration: underline;
 }
 
-@media (max-width:750px){
+@media (max-width:1000px){
     .produtos-lista {
         display: flex;
         flex-direction: column;
@@ -104,7 +105,16 @@
     }
 
     .produtos-container {
-        
         width: 400px;
+    }
+}
+
+@media (max-width:1200px) {
+    .produtos-lista {
+        width: 300px;
+        justify-content: space-between;
+    }
+    .produtos-lista img {
+        width:195px
     }
 }

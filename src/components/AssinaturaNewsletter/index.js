@@ -1,9 +1,7 @@
-import { useState, useRef, useEffect  } from 'react'
+import { useState, useRef } from 'react'
 import { ContainerAssinatura, Assinatura, ContainerBtn, Formulario } from "./styled"
 import emailjs from '@emailjs/browser';
 import validator from 'validator'
-
-import Api from '../../Services/api'
 
 import './assinatura.css'
 
@@ -12,25 +10,7 @@ export default function AssinaturaNewsletter(){
 
     const [email, setEmail] = useState('');
     const [btnAtvo, setBtnAtivo] = useState(true);
-    const [produtos, setProdutos]= useState([]);
     const form = useRef();
-
-    // useEffect(()=>{
-    //     function loadApi(){
-
-    //         const URL = "https://gist.githubusercontent.com/bugan/41d60ffa23fa0c4044cc138bf670780d/raw";
-
-    //         fetch(URL)
-    //         .then((response)=> response.json())
-    //         .then((json)=>{
-    //             setProdutos(json);
-    //             console.log(json);
-    //         })
-    //     }
-
-    //     loadApi();
-    // },[])
-
 
     function handleValidaEmail(e){
         setEmail(e.target.value)

@@ -61,6 +61,10 @@ export const Assinatura = styled.div`
         }
     }
 
+    @media (max-width:450px) {
+        width:300px;
+    }
+
 
 `;
 
@@ -77,6 +81,11 @@ export const ContainerBtn = styled.div`
     @media (max-width:650px){
         svg{
             left:93px;
+        }
+
+    @media (max-width:450px){
+        svg{
+            left:140px;
         }
 
     }
@@ -119,6 +128,7 @@ export const Formulario = styled.form`
 
     @media (max-width:650px){
         margin-left:70px;
+        width:300px;
         input{
             width:280px;
             
@@ -127,6 +137,13 @@ export const Formulario = styled.form`
         button{
             width:170px
         }
+
+        
     }
+
+    @media (max-width:450px) {
+        margin-left:120px;
+    }
+
 
 `;

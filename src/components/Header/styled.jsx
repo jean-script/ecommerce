@@ -62,5 +62,9 @@ export const ListaMenu = styled.ul`
             text-decoration: underline;
         }
     }
+
+    @media (max-width:510px){
+        display:none;
+    }
 `;
 

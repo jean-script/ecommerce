@@ -95,3 +95,16 @@
 .compra span:hover{
     text-decoration: underline;
 }
+
+@media (max-width:750px){
+    .produtos-lista {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produtos-container {
+        
+        width: 400px;
+    }
+}
